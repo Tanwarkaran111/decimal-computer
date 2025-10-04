@@ -1,0 +1,17 @@
+RUN: D:\Invented_library\venv\Scripts\python.exe -m decimal_computer.auto_runtime --n 1024 --digits 8 --trials 3
+RET: 0
+TIME: 2025-09-30T06:43:20.663377Z
+
+{"timestamp": 1759214600.6108532, "algo": "karatsuba", "mean_s": 140.5577221000179, "std_s": 2.887892159205347, "samples": null, "trials": 3, "success": true, "error": null}
+
+[auto_runtime] INFO: No mapping for (size=1024, digits=8); using default='None'
+[decimal_gemm] No mapping for (size=1024, digits=8); using default='None'
+[decimal_gemm] NUMBA missing: numba not available
+[decimal_gemm] NUMBA missing: numba not available
+[decimal_gemm] NUMBA missing: numba not available
+[auto_runtime] WARNING: Algo 'numba' completed but reported failure: numba not available
+[decimal_gemm] Algo 'numba' completed but reported failure: numba not available
+[auto_runtime] WARNING: Algo 'schoolbook' completed but reported failure: Unknown mul_algo: 'schoolbook'
+[decimal_gemm] Algo 'schoolbook' completed but reported failure: Unknown mul_algo: 'schoolbook'
+[auto_runtime] INFO: Completed: algo=karatsuba mean_s=140.5577221000179 std_s=2.887892159205347 trials=3
+[decimal_gemm] Completed: algo=karatsuba mean_s=140.5577221000179 std_s=2.887892159205347 trials=3

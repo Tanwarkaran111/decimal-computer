@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "decimal-computer"
+version = "0.1.0"
+description = "Prototype decimal computer with digit-level GEMM and adaptive algorithm selection"
+readme = "README.md"
+requires-python = ">=3.10"
+
+authors = [
+    { name = "Karan Singh" }
+]
+
+license = { text = "MIT" }
+
+# Core runtime dependencies
+dependencies = [
+    "numpy",
+]
+
+# Optional extras
+[project.optional-dependencies]
+gmp = ["gmpy2"]
+plot = ["matplotlib"]
+
+[project.scripts]
+decimal-computer = "decimal_computer.cli:main"

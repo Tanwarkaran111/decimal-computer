@@ -1,0 +1,65 @@
+{
+  "4:4": {
+    "algo": "numba",
+    "mean_time_s": 0.0001103499671444,
+    "n_trials": 2,
+    "confidence": true,
+    "reason": "ok"
+  },
+  "4:8": {
+    "algo": "numba",
+    "mean_time_s": 0.0001198999816551,
+    "n_trials": 2,
+    "confidence": true,
+    "reason": "ok"
+  },
+  "4:16": {
+    "algo": "numba",
+    "mean_time_s": 0.0001012000720947,
+    "n_trials": 2,
+    "confidence": true,
+    "reason": "ok"
+  },
+  "8:4": {
+    "algo": "strassen",
+    "mean_time_s": 0.0004004999645985,
+    "n_trials": 2,
+    "confidence": true,
+    "reason": "ok"
+  },
+  "8:8": {
+    "algo": "numba",
+    "mean_time_s": 0.0001541000092401,
+    "n_trials": 2,
+    "confidence": true,
+    "reason": "ok"
+  },
+  "8:16": {
+    "algo": "numba",
+    "mean_time_s": 0.0001038999762385,
+    "n_trials": 2,
+    "confidence": true,
+    "reason": "ok"
+  },
+  "16:4": {
+    "algo": "schoolbook",
+    "mean_time_s": 0.0020708499359897,
+    "n_trials": 2,
+    "confidence": true,
+    "reason": "ok"
+  },
+  "16:8": {
+    "algo": "schoolbook",
+    "mean_time_s": 0.0024883999722078,
+    "n_trials": 2,
+    "confidence": true,
+    "reason": "ok"
+  },
+  "16:16": {
+    "algo": "numba",
+    "mean_time_s": 1.4793415499734692,
+    "n_trials": 2,
+    "confidence": true,
+    "reason": "ok"
+  }
+}

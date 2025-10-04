@@ -1,0 +1,8 @@
+[auto_runtime] start n=1024 digits=8 trials=3
+[auto_runtime] ERROR: No decimal runner available in this environment
+Traceback (most recent call last):
+  File "D:\Decimal_Computer_Project\decimal_computer\auto_runtime.py", line 157, in main
+    res = runner(args.n, args.digits, args.trials)
+  File "D:\Decimal_Computer_Project\decimal_computer\auto_runtime.py", line 125, in _dummy_runner
+    raise RuntimeError("No decimal runner available in this environment")
+RuntimeError: No decimal runner available in this environment

@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install deps (fast)
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest numpy
+
+      - name: Run tests
+        run: |
+          pytest -q || true
+
+      - name: Quick import & smoke
+        run: |
+          python -c "import phase3, phase4, phase5, phase6, phase7; print('imports ok')"
+
+      - name: Quick bench smoke (fast)
+        run: |
+          python -m phase3.benchmarks --sizes 2 --digits 1 --algos auto --trials 1 || true

@@ -1,0 +1,4 @@
+algo,size_n,size_m,size_p,digits,trial,elapsed_seconds
+schoolbook,4,4,4,1,1,0.000009
+karatsuba,4,4,4,1,1,0.000018
+strassen,4,4,4,1,1,0.000009

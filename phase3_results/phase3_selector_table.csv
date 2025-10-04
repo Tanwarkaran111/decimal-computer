@@ -1,0 +1,13 @@
+algo,n,digits,trials,mean_seconds,stdev_seconds
+decimal_naive,64,1,2,0.013696,0.000807
+strassen,64,2,2,0.014252,2.3e-05
+schoolbook,64,4,2,0.014191,0.000334
+decimal_naive,128,1,2,0.10346,0.000794
+strassen,128,2,2,0.103109,0.005074
+strassen,128,4,2,0.105125,0.001599
+decimal_naive,256,1,2,0.785343,0.018396
+strassen,256,2,2,0.787397,0.063312
+strassen,256,4,2,0.778142,0.003792
+strassen,512,1,2,5.678168,0.027197
+strassen,512,2,2,5.311442,0.106818
+strassen,512,4,2,5.538675,0.005487

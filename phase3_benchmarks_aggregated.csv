@@ -1,0 +1,4 @@
+algo,n,digits,trials,mean_seconds,stdev_seconds
+karatsuba,4,1,1,0.000018,0.000000
+schoolbook,4,1,1,0.000009,0.000000
+strassen,4,1,1,0.000009,0.000000

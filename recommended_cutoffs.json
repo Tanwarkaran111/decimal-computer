@@ -1,0 +1,14 @@
+{
+  "4": {
+    "karatsuba": 8,
+    "strassen": null
+  },
+  "8": {
+    "karatsuba": 8,
+    "strassen": null
+  },
+  "16": {
+    "karatsuba": 4,
+    "strassen": 4
+  }
+}

@@ -1,0 +1,546 @@
+================================================================================
+Warmup fail for auto_multiply
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase6\auto_multiply.py", line 164, in auto_multiply
+    alg = choose_algorithm(x, y, exact=exact, prefer=prefer)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Invented_library\phase6\auto_multiply.py", line 117, in choose_algorithm
+    dx = _digits_count(abs(x))
+                       ^^^^^^
+TypeError: bad operand type for abs(): 'list'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+TypeError: auto_multiply() takes 2 positional arguments but 3 were given
+
+================================================================================
+Warmup fail for auto_multiply
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase6\auto_multiply.py", line 164, in auto_multiply
+    alg = choose_algorithm(x, y, exact=exact, prefer=prefer)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Invented_library\phase6\auto_multiply.py", line 117, in choose_algorithm
+    dx = _digits_count(abs(x))
+                       ^^^^^^
+TypeError: bad operand type for abs(): 'list'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+TypeError: auto_multiply() takes 2 positional arguments but 3 were given
+
+================================================================================
+Warmup fail for multiply_ints
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints_ntt
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints_ntt
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints_ntt
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints_ntt
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints_ntt
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints_ntt
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints_ntt
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints_ntt
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints_ntt
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints_ntt
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints_ntt
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase4\fft_multiply.py", line 158, in multiply_ints
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+================================================================================
+Warmup fail for multiply_ints_ntt
+Exception traceback:
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 50, in _safe_warmup_test
+    func(A, B)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Invented_library\phase3\benchmarks.py", line 64, in _safe_warmup_test
+    func(A, B, 16)
+  File "D:\Invented_library\phase5\ntt_multiply.py", line 171, in multiply_ints_ntt
+    sign = -1 if (x < 0) ^ (y < 0) else 1
+                  ^^^^^
+TypeError: '<' not supported between instances of 'list' and 'int'
+

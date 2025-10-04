@@ -1,0 +1,7 @@
+numpy
+
+[gmp]
+gmpy2
+
+[plot]
+matplotlib

@@ -1,0 +1,11 @@
+COMMAND:
+python -m decimal_computer.auto_runtime --n 1024 --digits 8 --trials 3
+
+=== STDOUT ===
+
+
+=== STDERR ===
+usage: auto_runtime.py [-h] [--size SIZE] [--digits DIGITS] [--verbose]
+auto_runtime.py: error: unrecognized arguments: --n 1024 --trials 3
+
+

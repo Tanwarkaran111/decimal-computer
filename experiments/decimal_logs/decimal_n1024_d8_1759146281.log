@@ -1,0 +1,8 @@
+RUN: D:\Anaconda\python.exe -m decimal_computer.auto_runtime --n 1024 --digits 8 --trials 3
+RET: 2
+TIME: 2025-09-29T11:44:42.151468Z
+
+
+usage: auto_runtime.py [-h] [--size SIZE] [--digits DIGITS]
+                       [--mapping MAPPING] [--verbose]
+auto_runtime.py: error: unrecognized arguments: --n 1024 --trials 3

@@ -1,0 +1,8 @@
+{
+  "schoolbook_vs_karatsuba_d4": 256,
+  "karatsuba_vs_strassen_d4": 256,
+  "schoolbook_vs_karatsuba_d8": 128,
+  "karatsuba_vs_strassen_d8": 128,
+  "schoolbook_vs_karatsuba_d16": 256,
+  "karatsuba_vs_strassen_d16": 256
+}

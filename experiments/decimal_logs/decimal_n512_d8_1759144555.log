@@ -1,0 +1,3 @@
+
+usage: auto_runtime.py [-h] [--size SIZE] [--digits DIGITS] [--verbose]
+auto_runtime.py: error: unrecognized arguments: --n 512 --trials 3

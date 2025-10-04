@@ -1,0 +1,10 @@
+# Core dependencies
+numpy
+
+# Optional/extra features
+matplotlib
+gmpy2
+
+# Other packages you already had
+pandas
+scikit-learn
