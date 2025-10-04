@@ -1,0 +1,34 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Build outputs
+build/
+dist/
+*.egg-info/
+
+# Logs and temporary
+*.log
+*.tmp
+*.bak
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+.pytest_cache/
+coverage/
+
+# Jupyter / notebooks checkpoints
+.ipynb_checkpoints/
