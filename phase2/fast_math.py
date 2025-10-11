@@ -1,25 +1,65 @@
-# --- compatibility exports for tests ---
-# If your internal names differ, adapt these wrappers to call them.
-try:
-    # If digit_mul/digit_add are already defined, this does nothing.
-    digit_mul  # type: ignore
-    digit_add  # type: ignore
-except NameError:
-    # provide shims if underlying implementation uses different names
-    # Replace `my_digit_mul_impl` / `my_digit_add_impl` with real names if needed.
-    def digit_mul(a: int, b: int) -> int:
-        """Multiply single decimal digits (compat shim)."""
-        # try to use a verified internal function if present
-        impl = globals().get("digit_mul_impl") or globals().get("digit_mul_internal")
-        if callable(impl):
-            return impl(a, b)
-        # fallback naive impl (safe)
-        return a * b
+# phase2/fast_math.py
+"""
+Simple fast_math helpers used as small backends in tests.
+They accept either integers or lists-of-decimal-digits (MSB -> LSB).
+For lists, we convert to integers, do the operation, and convert back
+to a digit list to keep the API convenient for tests.
+"""
 
-    def digit_add(a: int, b: int, carry: int = 0) -> (int, int):
-        """Add two digits plus carry -> (result_digit, new_carry)."""
-        impl = globals().get("digit_add_impl") or globals().get("digit_add_internal")
-        if callable(impl):
-            return impl(a, b, carry)
-        s = a + b + (carry or 0)
-        return s % 10, s // 10
+from __future__ import annotations
+from typing import List, Union
+
+NumberOrDigits = Union[int, List[int]]
+
+def _digits_to_int(d: List[int]) -> int:
+    """Convert list-of-digits (MSB->LSB) to int."""
+    if not d:
+        return 0
+    val = 0
+    for digit in d:
+        val = val * 10 + int(digit)
+    return val
+
+def _int_to_digits(n: int) -> List[int]:
+    """Convert non-negative int to list-of-digits (MSB->LSB)."""
+    if n == 0:
+        return [0]
+    if n < 0:
+        n = -n  # tests use positive values; negative handling not required here
+    s = str(n)
+    return [int(ch) for ch in s]
+
+def digit_mul(a: NumberOrDigits, b: NumberOrDigits) -> NumberOrDigits:
+    """
+    Multiply either two ints or two digit-lists.
+    If inputs are lists, returns a list of digits (MSB->LSB).
+    """
+    # both lists -> operate on them
+    if isinstance(a, list) and isinstance(b, list):
+        ai = _digits_to_int(a)
+        bi = _digits_to_int(b)
+        prod = ai * bi
+        return _int_to_digits(prod)
+    # one list and one int -> normalize to ints and return int (tests don't use this)
+    if isinstance(a, list) and isinstance(b, int):
+        return _digits_to_int(a) * b
+    if isinstance(b, list) and isinstance(a, int):
+        return a * _digits_to_int(b)
+    # fallback: numeric multiply
+    return int(a) * int(b)
+
+def digit_add(a: NumberOrDigits, b: NumberOrDigits) -> NumberOrDigits:
+    """
+    Add either two ints or two digit-lists.
+    If inputs are lists, returns a list of digits (MSB->LSB).
+    """
+    if isinstance(a, list) and isinstance(b, list):
+        ai = _digits_to_int(a)
+        bi = _digits_to_int(b)
+        s = ai + bi
+        return _int_to_digits(s)
+    if isinstance(a, list) and isinstance(b, int):
+        return _digits_to_int(a) + int(b)
+    if isinstance(b, list) and isinstance(a, int):
+        return int(a) + _digits_to_int(b)
+    return int(a) + int(b)

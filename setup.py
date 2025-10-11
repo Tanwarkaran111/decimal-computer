@@ -116,11 +116,12 @@ for ext in ext_modules:
 
 # Add our AVX2 GEMM micro-kernel extension
 gemm_ext = Extension(
-    "fast_gemm._native",
+    "fast_gemm.gemm_native",
     sources=[
         "src/micro_kernel_scalar.c",
         "src/micro_kernel_avx2.c",
         "src/kernel_wrapper.c",
+        "src/gemm_init_shim.c" 
     ],
     include_dirs=["include"],
     extra_compile_args=["-O3", "-mavx2", "-mfma", "-std=c11"],

@@ -1,0 +1,40 @@
+﻿# tests/test_gemm_basic.py
+import numpy as np
+import time
+import pytest
+import sys
+
+
+sys.path.insert(0, 'src')
+import myext
+
+
+
+
+@pytest.mark.parametrize('N', [8, 64, 128])
+def test_gemm_correctness(N):
+    rng = np.random.RandomState(123)
+A = rng.rand(N, N)
+B = rng.rand(N, N)
+C = myext.gemm(A, B)
+Cref = A.dot(B)
+err = np.max(np.abs(C - Cref))
+assert err < 1e-6, f"max error {err} >= 1e-6"
+
+
+
+
+def test_gemm_perf_report():
+    rng = np.random.RandomState(1)
+A = rng.rand(256, 256)
+B = rng.rand(256, 256)
+t0 = time.perf_counter()
+myext.gemm(A, B)
+t1 = time.perf_counter()
+print('\n[perf] myext.gemm 256x256 time:', t1 - t0)
+
+
+t0 = time.perf_counter()
+np.dot(A, B)
+t1 = time.perf_counter()
+print('[perf] numpy.dot 256x256 time:', t1 - t0)

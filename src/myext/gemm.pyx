@@ -1,11 +1,12 @@
-# cython: boundscheck=False, wraparound=False, nonecheck=False, cdivision=True
+﻿# cython: boundscheck=False, wraparound=False, nonecheck=False, cdivision=True
 # cython: language_level=3
 import cython
 from cython.parallel cimport prange
 cimport numpy as np
 import numpy as np
 from libc.stdlib cimport malloc, free
-
+cimport numpy as np
+ctypedef np.npy_intp Py_ssize_t
 ctypedef double DTYPE_t
 
 # low-level block multiply kernel in Cython that runs nogil
@@ -18,7 +19,7 @@ cdef int _block_multiply(double* A, double* B, double* C,
                          int lda, int ldb, int ldc,
                          int rowA_offset, int colB_offset,
                          int blockM, int blockN, int blockK) nogil:
-    cdef int i, j, k
+    cdef Py_ssize_t i, j, k
     cdef double s
     cdef int a_idx, b_idx, c_idx
     # A pointer is at (rowA_offset, startK); B pointer is at (startK, colB_offset)
@@ -145,3 +146,4 @@ cpdef gemm_block(np.ndarray[DTYPE_t, ndim=2] A,
             curM, curN, curK
         )
     return None
+

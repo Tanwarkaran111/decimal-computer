@@ -1,0 +1,12 @@
+{
+  "dummy_test": {
+    "sample_cost_per_item": 6.189749983604997e-08,
+    "cpu_count": 12,
+    "updated_at": 1759823334.024402
+  },
+  "cpu12_n1000000": {
+    "sample_cost_per_item": 1.4024185000016588e-05,
+    "cpu_count": 12,
+    "updated_at": 1759825152.2125027
+  }
+}

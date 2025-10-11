@@ -1,0 +1,10 @@
+{
+  "cpu12_n200000": {
+    "workers": 12,
+    "chunksize": 50000
+  },
+  "cpu12_n1000000": {
+    "workers": 1,
+    "chunksize": 500000
+  }
+}

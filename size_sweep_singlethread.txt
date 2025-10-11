@@ -1,0 +1,56 @@
+Python bits: 64
+Loading DLL: D:\Invented_library\build\gemm_native_packed.dll
+Sweeping sizes (single run each). OMP_NUM_THREADS should be 1 for this test.
+
+--- Test size M=16 N=16 K=16 ---
+DBG tile tid=0 bm=0 bk=0 bn=0 mlen=16 klen=16 nlen=16 B_block_src=000001E15DA931D0 B_packed=000001E15F7BD100
+OK (time 0.0191s)
+
+--- Test size M=32 N=32 K=32 ---
+DBG tile tid=0 bm=0 bk=0 bn=0 mlen=32 klen=32 nlen=32 B_block_src=000001E15D9C7EA0 B_packed=000001E15F7BD100
+OK (time 0.0001s)
+
+--- Test size M=48 N=48 K=48 ---
+DBG tile tid=0 bm=0 bk=0 bn=0 mlen=48 klen=48 nlen=48 B_block_src=000001E15F7C6100 B_packed=000001E15F7CA940
+OK (time 0.0002s)
+
+--- Test size M=64 N=64 K=64 ---
+DBG tile tid=0 bm=0 bk=0 bn=0 mlen=64 klen=64 nlen=64 B_block_src=000001E15F7CD100 B_packed=000001E15F7D5140
+OK (time 0.0002s)
+
+--- Test size M=80 N=80 K=80 ---
+DBG tile tid=0 bm=0 bk=0 bn=0 mlen=80 klen=80 nlen=80 B_block_src=000001E15F7D6100 B_packed=000001E15F7E2940
+OK (time 0.0003s)
+
+--- Test size M=96 N=96 K=96 ---
+DBG tile tid=0 bm=0 bk=0 bn=0 mlen=96 klen=96 nlen=96 B_block_src=000001E15F7E1100 B_packed=000001E15F7F3140
+OK (time 0.0005s)
+
+--- Test size M=128 N=128 K=128 ---
+DBG tile tid=0 bm=0 bk=0 bn=0 mlen=128 klen=128 nlen=128 B_block_src=000001E15F7FD100 B_packed=000001E15F81D140
+OK (time 0.0010s)
+
+--- Test size M=160 N=160 K=160 ---
+DBG tile tid=0 bm=0 bk=0 bn=0 mlen=160 klen=128 nlen=160 B_block_src=000001E15F821100 B_packed=000001E15F853140
+DBG tile tid=0 bm=0 bk=128 bn=0 mlen=160 klen=32 nlen=160 B_block_src=000001E15F849100 B_packed=000001E15F853140
+OK (time 0.0015s)
+
+--- Test size M=192 N=192 K=192 ---
+DBG tile tid=0 bm=0 bk=0 bn=0 mlen=192 klen=128 nlen=192 B_block_src=000001E15F84D100 B_packed=000001E15F895140
+Traceback (most recent call last):
+  File "D:\Invented_library\size_sweep.py", line 44, in <module>
+    run_once(M,N,K)
+    ~~~~~~~~^^^^^^^
+  File "D:\Invented_library\size_sweep.py", line 23, in run_once
+    lib.gemm_dispatch_packed(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        A.ctypes.data_as(ctypes.c_void_p),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        ctypes.c_size_t(K), ctypes.c_size_t(N), ctypes.c_size_t(N)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+OSError: exception: access violation reading 0x000001E15F8DF140
+FAILED with exception: <class 'OSError'> exception: access violation reading 0x000001E15F8DF140
+Aborting sweep.

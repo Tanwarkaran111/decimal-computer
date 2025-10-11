@@ -1,0 +1,63 @@
+# setup_myext.py
+from setuptools import setup, Extension, find_packages
+import sys
+import numpy as np
+from pathlib import Path
+
+# decide compile args per-platform
+if sys.platform == "win32":
+    extra_compile_args = ["/O2", "/openmp", "/arch:AVX2"]
+    extra_link_args = []
+else:
+    extra_compile_args = ["-O3", "-march=native", "-fopenmp"]
+    extra_link_args = ["-fopenmp"]
+
+# Sources:
+# prefer using the generated C from Cython (gemm.c) if present;
+# fall back to gemm.pyx (Cython will be invoked by cythonize) otherwise.
+src = Path("src")
+myext_dir = src / "myext"
+if (myext_dir / "gemm.c").exists():
+    gemm_source = str(myext_dir / "gemm.c")
+else:
+    # if only .pyx exists, build from it
+    gemm_source = str(myext_dir / "gemm.pyx")
+
+common_kernel_sources = [
+    "src/kernel_wrapper.c",
+    "src/micro_kernel_avx2.c",
+    "src/micro_kernel_scalar.c",
+]
+
+all_sources = [, 'src/micro_kernel_avx2_opt.c'] + common_kernel_sources
+
+ext_modules = [
+    Extension(
+        "myext.gemm",
+        sources=all_sources,
+        include_dirs=[np.get_include(), "include"],
+        extra_compile_args=extra_compile_args,
+        extra_link_args=extra_link_args,
+        language="c",
+    )
+]
+
+# don't cythonize automatically if we're compiling from gemm.c
+# but if gemm_source ends with .pyx, import cythonize
+use_cython = gemm_source.endswith(".pyx")
+if use_cython:
+    from Cython.Build import cythonize
+    ext_modules = cythonize(ext_modules, language_level=3)
+
+setup(
+    name="myext_local",
+    version="0.1",
+    description="myext (gemm) local build",
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
+    ext_modules=ext_modules,
+    script_args=["build_ext", "--inplace"],
+    include_package_data=True,
+    package_data={"myext": ["tuned.json"]},
+)
+

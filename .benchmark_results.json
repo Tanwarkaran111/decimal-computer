@@ -1,0 +1,11 @@
+{
+  "n": 200000,
+  "cpu": 12,
+  "results": {
+    "single": 0.3962707666699619,
+    "pool_helper_default": 0.8055645666609053,
+    "pool_shared_default": 0.8478641333349515,
+    "pyworkers_default": 0.5954634333320428,
+    "autotune": 0.36843709999811836
+  }
+}
